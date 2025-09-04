@@ -1,0 +1,26 @@
+﻿{
+  "mode": "Indexed",
+  "policyRule": {
+    "if": {
+      "anyOf": [
+        {
+          "field": "tags['Owner']",
+          "exists": "false"
+        },
+        {
+          "field": "tags['Project']", 
+          "exists": "false"
+        }
+      ]
+    },
+    "then": {
+      "effect": "audit"
+    }
+  },
+  "parameters": {},
+  "displayName": "Resources should be tagged with Owner and Project",
+  "description": "This policy audits resources that do not have Owner and Project tags",
+  "metadata": {
+    "category": "Tags"
+  }
+}

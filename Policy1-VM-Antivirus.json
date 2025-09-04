@@ -1,0 +1,1 @@
+{"mode": "Indexed", "policyRule": {"if": {"field": "type", "equals": "Microsoft.Compute/virtualMachines"}, "then": {"effect": "audit"}}, "displayName": "Virtual machines should have antivirus protection"}
